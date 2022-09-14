@@ -1,14 +1,32 @@
 //// Rock Paper Scissors
 
-let myArray = ['Rock','Paper','Scissors'];
-let randomArray = Math.floor(Math.random() * myArray.length);
-
 //// Get output that computer is going to use
 
-function getComputerChoice(myArray) {
+// Create function that chooses random option from array
+
+function getComputerChoice() {
+    // Create array
+    let myArray = ['Rock','Paper','Scissors'];
+    // Create array 'randomizer'
+    let randomArray = Math.floor(Math.random() * myArray.length);
     // Randomly return option btw r,p & s from array
     return myArray[randomArray];
 }
+
+
+//// Test for whether getComputerChoice gives random answers 
+
+/*
+
+for (let i = 0; i < 5; i++) {
+    console.log(getComputerChoice())
+}
+
+// It Works!
+
+*/
+
+
 
 //// Write a function that plays a round of RPS
 
@@ -24,7 +42,7 @@ function playRound() {
     
     //// Get computerSelection
 
-    let computerSelection = getComputerChoice(myArray);
+    let computerSelection = getComputerChoice();
 
     computerSelection = computerSelection.toUpperCase();
     
@@ -58,7 +76,18 @@ function playRound() {
 
 }
 
-console.log(playRound());
+
+//// Test whether playRound works
+
+/*
+
+for (let i = 0; i < 5; i++) {
+    console.log(playRound())
+}
+
+// It Works!
+
+*/
 
 //// Write a function game() that plays 5 times and that records the score
 
@@ -67,7 +96,7 @@ function game() {
         // Call playRound 5 times
 
     for (let i = 1; i < 6; i++) {
-        playRound();
+        return playRound();
     };
         
     // How to record score?
@@ -84,3 +113,7 @@ function game() {
 }
 
 console.log(game());
+
+
+
+
