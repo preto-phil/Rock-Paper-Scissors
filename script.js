@@ -115,6 +115,7 @@ function game() {
 
 console.log(game());
 
-
+//// Still need to write code to announce winner at end
+    // Maybe if statement is most suitable?
 
 
