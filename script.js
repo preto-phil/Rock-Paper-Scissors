@@ -10,27 +10,25 @@ function getComputerChoice(myArray) {
     return myArray[randomArray];
 }
 
-console.log(getComputerChoice(myArray));
-
-//// Get playerSelection
-
-let playerSelection = prompt('Rock, Paper or Scissors?');
-
-playerSelection = playerSelection.toUpperCase();
-
-console.log(playerSelection)
-
-//// Get computerSelection
-
-let computerSelection = getComputerChoice(myArray);
-
-computerSelection = computerSelection.toUpperCase();
-
-console.log(computerSelection)
-
 //// Write a function that plays a round of RPS
 
 function playRound() {
+
+    //// Get playerSelection
+
+    let playerSelection = prompt('Rock, Paper or Scissors?');
+
+    playerSelection = playerSelection.toUpperCase();
+
+    console.log(`User choice: ${playerSelection}`);
+    
+    //// Get computerSelection
+
+    let computerSelection = getComputerChoice(myArray);
+
+    computerSelection = computerSelection.toUpperCase();
+    
+    console.log(`Computer choice: ${computerSelection}`)
 
     // if (r v s || p v r || s v p)
         // return You won
@@ -56,6 +54,7 @@ function playRound() {
 
     // NB MAKE PARAMETERS CASE INSENSITIVE
         // \i
+        // toUpperCase()
 
 }
 
@@ -66,7 +65,11 @@ console.log(playRound());
 function game() {
     // Write for loop to repeat game for 5 rounds
         // Call playRound 5 times
-    // for () {};
+
+    for (let i = 1; i < 6; i++) {
+        playRound();
+    };
+        
     // How to record score?
         // if win then what
             // console.log()
@@ -77,4 +80,7 @@ function game() {
     // After 5 rounds, how to declare the winner?
 
 
+
 }
+
+console.log(game());
