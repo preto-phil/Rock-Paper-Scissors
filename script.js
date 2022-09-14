@@ -1,33 +1,38 @@
 //// Rock Paper Scissors
 
+let myArray = ['Rock','Paper','Scissor'];
+let randomArray = Math.floor(Math.random() * myArray.length);
+
 //// Get output that computer is going to use
 
-function getComputerChoice() {
-    // Randomly return option btw r,p & s
-        // return 'Rock'
-        // return 'Paper'
-        // return 'Scissors'
-    // return random(['Rock', 'Paper', 'Scissors']);
-
+function getComputerChoice(myArray) {
+    // Randomly return option btw r,p & s from array
+    return myArray[randomArray];
 }
+
+console.log(getComputerChoice(myArray));
 
 //// Get playerSelection
 
 let playerSelection = prompt('make your choice');
 
+//// Get computerSelection
+
+let computerSelection = getComputerChoice();
 
 //// Write a function that plays a round of RPS
 
-function playRound(playerSelection, getComputerChoice) {
+function playRound(playerSelection, computerSelection) {
 
     // if (r v s || p v r || s v p)
-        // return You win
-
-    // if (r v r || p v p || s v s)
-        // return You draw
+        // return You won
 
     // if (r v p || p v s || s v r)
-        // return You lose
+        // return You lost
+
+    // if (r v r || p v p || s v s)
+        // return Draw
+        // repeat playRound
 
     // NB MAKE PARAMETERS CASE INSENSITIVE
 
