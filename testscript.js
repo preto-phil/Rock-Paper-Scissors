@@ -14,17 +14,85 @@ function getComputerChoice() {
 }
 
 
-//// Test for whether getComputerChoice gives random answers 
+function playRound(playerSelection, computerSelection) {
+    
+
+
+    if (playerSelection == 'ROCK' && computerSelection == 'SCISSORS') {
+        return "You Won! Rock beats Scissors.";
+    };
+
+    if (playerSelection == 'PAPER' && computerSelection == 'ROCK') {
+        return "You Won! Paper beats Rock.";
+    };
+
+    if (playerSelection == 'SCISSORS' && computerSelection == 'PAPER') {
+        return "You Won! Scissors beat Paper.";
+    };
+
+    // if (r v p || p v s || s v r)
+        // return You lost
+
+    if (playerSelection == 'ROCK' && computerSelection == 'PAPER') {
+        return "You Lost! Rock loses to Paper.";
+    };
+
+    if (playerSelection == 'PAPER' && computerSelection == 'SCISSORS') {
+        return "You Lost! Paper loses to Scissors.";
+    };
+
+    if (playerSelection == 'Scissors' && computerSelection == 'Rock') {
+        return "You Lost! Scissors loses to Rock.";
+    };
+
+
+    // if (r v r || p v p || s v s)
+        // return Draw
+        /////////////////////////////// repeat playRound?
+
+    if (playerSelection == 'ROCK' && computerSelection == 'ROCK' || playerSelection == 'PAPER' && computerSelection == 'PAPER' || playerSelection == 'SCISSORS' && computerSelection == 'SCISSORS') {
+        return "Draw!"
+    };
+
+}
+
+let playerSelection = prompt('Choice');
+playerSelection = playerSelection.toLocaleUpperCase();
+let computerSelection = getComputerChoice();
+computerSelection = computerSelection.toLocaleUpperCase();
+
+// console.log(playRound(playerSelection, computerSelection))
+
+function game() {
+    for (let i = 0; i < 5; i++) {
+        console.log(playRound(playerSelection, computerSelection));
+    };
+}
+
+console.log(game())
+
+
+
+
+
+
+
+
+
+
+
 
 /*
+
+//// Test for whether getComputerChoice gives random answers 
+
+
 
 for (let i = 0; i < 5; i++) {
     console.log(getComputerChoice())
 }
 
 // It Works!
-
-*/
 
 
 
@@ -79,7 +147,7 @@ function playRound() {
 
 //// Test whether playRound works
 
-/*
+
 
 for (let i = 0; i < 5; i++) {
     console.log(playRound())
@@ -87,7 +155,7 @@ for (let i = 0; i < 5; i++) {
 
 // It Works!
 
-*/
+
 
 //// Write a function game() that plays 5 times and that records the score
 
@@ -97,7 +165,7 @@ function game() {
 
     for (let i = 1; i < 6; i++) {
         console.log(playRound());
-
+        
     };
         
     // How to record score?
@@ -115,6 +183,6 @@ function game() {
 
 console.log(game());
 
-
+*/
 
 
