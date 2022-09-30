@@ -13,28 +13,13 @@ function getComputerChoice() {
     return myArray[randomArray];
 }
 
-
-//// Test for whether getComputerChoice gives random answers 
-
-/*
-
-for (let i = 0; i < 5; i++) {
-    console.log(getComputerChoice())
-}
-
-// It Works!
-
-*/
-
-
-
 //// Write a function that plays a round of RPS
 
 function playRound() {
 
     //// Get playerSelection
 
-    let playerSelection = prompt('Rock, Paper or Scissors?');
+    let playerSelection = ;
 
     playerSelection = playerSelection.toUpperCase();
 
@@ -77,6 +62,46 @@ function playRound() {
 }
 
 
+//// Event listener
+
+// Create variables linked to buttons
+
+const rockButton = document.querySelector('#rock');
+const paperButton = document.querySelector('#paper');
+const scissorsButton = document.querySelector('#scissors');
+
+// Create event listener linked to buttons
+
+rockButton.addEventListener('click', )
+
+rockButton.addEventListener('click', )
+
+rockButton.addEventListener('click', )
+
+
+/*
+
+
+
+
+
+//// Test for whether getComputerChoice gives random answers 
+
+
+
+for (let i = 0; i < 5; i++) {
+    console.log(getComputerChoice())
+}
+
+// It Works!
+
+
+
+
+
+
+
+
 //// Test whether playRound works
 
 /*
@@ -87,7 +112,7 @@ for (let i = 0; i < 5; i++) {
 
 // It Works!
 
-*/
+
 
 //// Write a function game() that plays 5 times and that records the score
 
