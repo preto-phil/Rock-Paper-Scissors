@@ -19,7 +19,7 @@ function playRound() {
 
     //// Get playerSelection
 
-    let playerSelection = ;
+    // let playerSelection = ;
 
     playerSelection = playerSelection.toUpperCase();
 
@@ -72,11 +72,11 @@ const scissorsButton = document.querySelector('#scissors');
 
 // Create event listener linked to buttons
 
-rockButton.addEventListener('click', )
+rockButton.addEventListener('click', );
 
-rockButton.addEventListener('click', )
+paperButton.addEventListener('click', );
 
-rockButton.addEventListener('click', )
+scissorsButton.addEventListener('click', );
 
 
 /*
@@ -143,4 +143,4 @@ console.log(game());
 //// Still need to write code to announce winner at end
     // Maybe if statement is most suitable?
 
-
+*/
