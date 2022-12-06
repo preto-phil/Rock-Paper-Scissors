@@ -43,6 +43,18 @@ function playRound() {
 
 }
 
+function selection() {
+    playerSelection = prompt('ROCK, PAPER, or SCISSORS?');
+    playerSelection = playerSelection.toUpperCase();
+    
+    if (playerSelection == 'ROCK' || playerSelection == 'PAPER' || playerSelection == 'SCISSORS')  {
+        return playerSelection;
+    } else { 
+        alert("Try again please.");
+        return selection();
+    }
+}
+
 function game() {
 
     for (i = 0; i < 5; i++) {
@@ -50,8 +62,7 @@ function game() {
         round = round + 1;
         console.log("Round: " + round);
         
-        playerSelection = prompt('ROCK, PAPER, or SCISSORS?');
-        playerSelection = playerSelection.toUpperCase();
+        selection();
 
         console.log("Player Choice: " + playerSelection);
                
