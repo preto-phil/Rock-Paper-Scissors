@@ -1,7 +1,106 @@
-/* Styles */
+
+
+html, body {
+    font-family: monospace;
+    font-size: xx-large;
+    color: azure;
+
+    height: 100%;
+    width: 100%;
+    
+    background-image: url('./Images/black-1072366_960_720.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+
+/* Title Block */
+
+
+.title-block {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: 700;
+    padding: 20px;
+}
+
+
+/* Middle Block */
+
+
+.middle-block {
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: xx-large;
+}
+
+.computer-block {
+    display: flex;
+    padding: 50px;
+    flex-direction: column;
+    width: 450px;
+}
+
+.player-block {
+    display: flex;
+    padding: 50px;
+    flex-direction: column;
+    width: 450px;
+}
+
+.result-block {
+    display: flex;
+    padding: 50px;
+    flex-direction: column;
+    width: 450px;
+}
+
+.score {
+    display: flex;
+}
+
+/* End Result */
+
+.end-result-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 40px;
+    font-weight: 700;
+    height: 60px;
+}
+
+
+/* Buttons */
+
+.buttons-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.choiceButtons {
+    display: flex;
+    flex-direction: row;
+}
 
 button {
-    color: black;
-    background-color: azure;
-    padding: 15px;
+    display: flex;
+    padding: 20px;
+    font-size: xx-large;
+    margin: 10px;
+    border-radius: 8px;
+    border-color: black;
+    width: 200px;
+    justify-content: center;
 }
