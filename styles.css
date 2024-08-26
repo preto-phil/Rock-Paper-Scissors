@@ -1,18 +1,18 @@
-
-
-html, body {
+body {
     font-family: monospace;
     font-size: xx-large;
     color: azure;
 
-    height: 100%;
-    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+
+    height: 100vh;
+    width: 100vw;
     
     background-image: url('./Images/black-1072366_960_720.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-
 }
 
 
