@@ -39,8 +39,10 @@ HTML
 
 // Console version
 
+let round = 1;
 let player_score = 0;
 let cpu_score = 0;
+let gameOver = false;
 
 function playerChoice() {
   let p_choice = prompt('Rock, Paper, Scissors?', 'rock');
@@ -83,7 +85,9 @@ function checkWin(p_choice = playerChoice(), c_choice = computerChoice()) {
   return result;
 }
 
-function score() {
+function playRound() {
+  console.log(`### Round ${round} ###`);
+  ++round;
   let result = checkWin();
   if (result == 'win') {
     ++player_score;
@@ -95,8 +99,15 @@ function score() {
   console.log('CPU score: ' + cpu_score);
   if (player_score === 5) {
     console.log('Game over. You Win!');
+    gameOver = true;
   }
   if (cpu_score === 5) {
     console.log('Game over. You Lose!');
+    gameOver = true;
   }
 }
+
+while (gameOver == false) {
+  playRound();
+}
+

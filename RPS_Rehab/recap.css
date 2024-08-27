@@ -1,0 +1,70 @@
+body {
+  font-family: monospace;
+
+  background-color: darkgray;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+
+  font-size: 2rem;
+}
+
+.content {
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.round {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.display {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  margin: 1rem 0;
+  gap: 2rem;
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  gap: 2rem;
+}
+
+.endResult {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.restart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 1rem;
+}
