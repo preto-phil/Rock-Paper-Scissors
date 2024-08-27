@@ -29,12 +29,6 @@ Javascript
     - count wins and loses
     - return / display score
 
-HTML
-
-  - Display buttons
-  - Display player choice
-  - 
-
 */
 
 // Console version
