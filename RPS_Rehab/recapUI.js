@@ -45,34 +45,45 @@ function playRound(p_choice) {
   let result = checkWin(p_choice);
   if (result == 'win') {
     ++player_score;
-    document.getElementById('p_score_number').innerText = player_score;
   } 
   if (result == 'lose') {
     ++cpu_score;
-    document.getElementById('c_score_number').innerText = cpu_score;
   }
   if (player_score === 5) {
     gameOver = true;
+    let x = document.getElementById('end_result')
+    x.style.display = 'flex';
   }
   if (cpu_score === 5) {
     gameOver = true;
+    let x = document.getElementById('end_result')
+    x.style.display = 'flex';
   }
+  document.getElementById('p_score_number').innerText = player_score;
+  document.getElementById('c_score_number').innerText = cpu_score;
 }
 
 document.getElementById('rock').addEventListener('click', function() { 
-    document.getElementById('p_choice').innerText = 'rock',
-    playRound("rock")
+  if (gameOver !== true) {
+    document.getElementById('p_choice').innerText = 'rock';
+    playRound("rock");
   }
-)
+});
 
 document.getElementById('paper').addEventListener('click', function() { 
-    document.getElementById('p_choice').innerText = 'paper',
-    playRound("paper")
+  if (gameOver !== true) {
+    document.getElementById('p_choice').innerText = 'paper';
+    playRound("paper");
   }
-)
+});
 
 document.getElementById('scissors').addEventListener('click', function() { 
-    playRound("scissors"),
-    document.getElementById('p_choice').innerText = 'scissors'
+  if (gameOver !== true) {
+    document.getElementById('p_choice').innerText = 'scissors';
+    playRound("scissors");
   }
-)
+});
+
+document.getElementById('restart').addEventListener('click', function() { 
+  window.location.reload()
+});
