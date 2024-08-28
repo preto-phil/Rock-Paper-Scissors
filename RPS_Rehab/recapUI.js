@@ -4,10 +4,6 @@ let player_score = 0;
 let cpu_score = 0;
 let gameOver = false;
 
-
-
-// for children of display
-
 function computerChoice() {
   let randomNumber = Math.ceil(Math.random() * 3);
   let c_choice;
@@ -76,3 +72,15 @@ while (gameOver == false) {
 }
 
 // UI features
+
+document.getElementById('rock').addEventListener('click', () => 
+  document.getElementById('p_choice').innerText = 'rock'
+)
+
+document.getElementById('paper').addEventListener('click', () => 
+  document.getElementById('p_choice').innerText = 'paper'
+)
+
+document.getElementById('scissors').addEventListener('click', () => 
+  document.getElementById('p_choice').innerText = 'scissors'
+)
