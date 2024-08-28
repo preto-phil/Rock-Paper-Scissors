@@ -14,6 +14,7 @@ function computerChoice() {
   } else {
     c_choice = 'scissors';
   }
+  document.getElementById('c_choice').innerText = c_choice;
   return c_choice;
 };
 
@@ -34,17 +35,21 @@ function checkWin(p_choice, c_choice = computerChoice()) {
   } else {
     result = 'lose';
   }
+  document.getElementById('result_text').innerText = result;
   return result;
 }
 
-function playRound() {
+function playRound(p_choice) {
+  document.getElementById('round_number').innerText = `${round}`;
   ++round;
-  let result = checkWin();
+  let result = checkWin(p_choice);
   if (result == 'win') {
     ++player_score;
+    document.getElementById('p_score_number').innerText = player_score;
   } 
   if (result == 'lose') {
     ++cpu_score;
+    document.getElementById('c_score_number').innerText = cpu_score;
   }
   if (player_score === 5) {
     gameOver = true;
@@ -54,33 +59,20 @@ function playRound() {
   }
 }
 
-while (gameOver == false) {
-  document.getElementById("rock").addEventListener('click', () => 
-    p_choice = 'rock',
-    playRound(p_choice)
-  );
-  
-  document.getElementById("paper").addEventListener('click', () => 
-    p_choice = 'paper',
-    playRound(p_choice)
-  );
-  
-  document.getElementById("scissors").addEventListener('click', () => 
-    p_choice = 'scissors',
-    playRound(p_choice)
-  );
-}
-
-// UI features
-
-document.getElementById('rock').addEventListener('click', () => 
-  document.getElementById('p_choice').innerText = 'rock'
+document.getElementById('rock').addEventListener('click', function() { 
+    document.getElementById('p_choice').innerText = 'rock',
+    playRound("rock")
+  }
 )
 
-document.getElementById('paper').addEventListener('click', () => 
-  document.getElementById('p_choice').innerText = 'paper'
+document.getElementById('paper').addEventListener('click', function() { 
+    document.getElementById('p_choice').innerText = 'paper',
+    playRound("paper")
+  }
 )
 
-document.getElementById('scissors').addEventListener('click', () => 
-  document.getElementById('p_choice').innerText = 'scissors'
+document.getElementById('scissors').addEventListener('click', function() { 
+    playRound("scissors"),
+    document.getElementById('p_choice').innerText = 'scissors'
+  }
 )
